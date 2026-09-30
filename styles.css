@@ -659,3 +659,7 @@ main:focus{outline:none;}
   .copy-btn,.social-row a,.foot-links a,.field .value a{display:inline-flex;align-items:center;}
   nav.links a{display:flex;align-items:center;min-height:44px;}
 }
+/* sin JS no hay portapapeles: los datos siguen siendo enlaces y texto seleccionable */
+@media (scripting:none){
+  .copy-btn{display:none;}
+}
