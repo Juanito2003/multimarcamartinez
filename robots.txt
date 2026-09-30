@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juanito2003.github.io/multimarcamartinez/sitemap.xml
