@@ -24,6 +24,13 @@
     if(!e.target.closest('header.site')) setMenu(false);
   });
 
+  var status = document.getElementById('copy-status');
+  function announce(msg){
+    if(!status) return;
+    status.textContent = '';
+    setTimeout(function(){ status.textContent = msg; }, 50);
+  }
+
   document.querySelectorAll('.copy-btn').forEach(function(btn){
     btn.addEventListener('click', async function(){
       var text = btn.getAttribute('data-copy');
@@ -31,6 +38,7 @@
       try{
         await navigator.clipboard.writeText(text);
         btn.textContent = 'Copiado';
+        announce(btn.getAttribute('data-done') + ' al portapapeles');
       }catch(e){
         try{
           var range = document.createRange();
@@ -40,8 +48,10 @@
           sel.removeAllRanges();
           sel.addRange(range);
           btn.textContent = 'Selecciona y copia';
+          announce('No se pudo copiar automáticamente. El texto está seleccionado: cópialo con el menú o el teclado.');
         }catch(e2){
           btn.textContent = 'No disponible';
+          announce('No se pudo copiar. El dato es: ' + text);
         }
       }
       setTimeout(function(){ btn.textContent = original; }, 1600);
