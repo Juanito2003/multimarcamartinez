@@ -1,5 +1,7 @@
 # Martínez Multimarca — web
 
+[![Validar HTML](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/validar-html.yml/badge.svg)](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/validar-html.yml)
+
 Web estática de Martínez Multimarca (Verín, Ourense). HTML, CSS y JS sin dependencias ni paso de build, publicada en GitHub Pages: <https://juanito2003.github.io/multimarcamartinez/>
 
 ## Contenido
@@ -53,7 +55,7 @@ La URL de GitHub Pages aparece en estos sitios; al cambiar de dominio, sustitúy
 Nota: en un sitio de proyecto de GitHub Pages los buscadores solo leen el `robots.txt` de la raíz del dominio (`juanito2003.github.io/robots.txt`), así que el de este repo no tendrá efecto hasta tener dominio propio. Mientras tanto, el sitemap puede enviarse a mano en Google Search Console.
 
 ## Verificación (30/09/2026)
-- `html-validate` sin errores en las cuatro páginas.
+- `html-validate` sin errores en las cuatro páginas. Desde octubre de 2026 se comprueba automáticamente en cada push y pull request con GitHub Actions (`.github/workflows/validar-html.yml`, reglas en `.htmlvalidate.json`).
 - Lighthouse móvil (servidor local, mediana de 3 pasadas):
 
   | | Performance | Accessibility | Best Practices | SEO |
@@ -68,4 +70,4 @@ Nota: en un sitio de proyecto de GitHub Pages los buscadores solo leen el `robot
 - Confirmar el dato «más de 40 años» y la valoración y seguidores del hero.
 - Conseguir una foto del local de más resolución: la actual mide 1200x313 y se ve algo borrosa en pantallas retina.
 - Sustituir o ampliar la galería cuando haya fotos de stock actual.
-- Trasladar el contenido al WordPress/Avada existente en martinezmultimarca.com una vez haya acceso al hosting, aplicando antes las correcciones de seguridad del informe de auditoría (2FA, deshabilitar XML-RPC `system.multicall`, ocultar enumeración de usuarios REST, rate-limiting).
+- Trasladar el contenido a la web actual de martinezmultimarca.com una vez haya acceso al hosting, aplicando antes las correcciones de seguridad acordadas con el cliente.
