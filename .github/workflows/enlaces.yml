@@ -1,0 +1,27 @@
+name: Comprobar enlaces
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Todos los lunes a las 07:00 UTC, para enterarnos si se cae un enlace externo
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar enlaces internos y externos
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 404.html se deja fuera: sus enlaces dependen del <base href="/multimarcamartinez/">
+          # que solo existe en GitHub Pages. Los enlaces tel: y mailto: lychee no los comprueba.
+          # Las exclusiones (redes sociales que bloquean a los robots) están en .lycheeignore.
+          args: --no-progress --verbose index.html aviso-legal.html privacidad.html
+          fail: true

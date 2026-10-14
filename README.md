@@ -1,6 +1,7 @@
 # Martínez Multimarca — web
 
 [![Validar HTML](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/validar-html.yml/badge.svg)](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/validar-html.yml)
+[![Comprobar enlaces](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/enlaces.yml/badge.svg)](https://github.com/Juanito2003/multimarcamartinez/actions/workflows/enlaces.yml)
 
 Web estática de Martínez Multimarca (Verín, Ourense). HTML, CSS y JS sin dependencias ni paso de build, publicada en GitHub Pages: <https://juanito2003.github.io/multimarcamartinez/>
 
@@ -56,6 +57,7 @@ Nota: en un sitio de proyecto de GitHub Pages los buscadores solo leen el `robot
 
 ## Verificación (30/09/2026)
 - `html-validate` sin errores en las cuatro páginas. Desde octubre de 2026 se comprueba automáticamente en cada push y pull request con GitHub Actions (`.github/workflows/validar-html.yml`, reglas en `.htmlvalidate.json`).
+- Enlaces internos y externos comprobados con [lychee](https://github.com/lycheeverse/lychee) en cada push, en cada pull request y todos los lunes (`.github/workflows/enlaces.yml`). Instagram y Facebook se excluyen en `.lycheeignore` porque bloquean las peticiones automáticas.
 - Lighthouse móvil (servidor local, mediana de 3 pasadas):
 
   | | Performance | Accessibility | Best Practices | SEO |

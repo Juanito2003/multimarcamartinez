@@ -1,0 +1,5 @@
+# Enlaces que lychee no comprueba.
+# Instagram y Facebook bloquean las peticiones automáticas y dan error
+# aunque la página exista: se revisan a mano de vez en cuando.
+^https://www\.instagram\.com/
+^https://www\.facebook\.com/
