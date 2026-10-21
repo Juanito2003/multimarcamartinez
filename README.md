@@ -8,6 +8,7 @@ Web estática de Martínez Multimarca (Verín, Ourense). HTML, CSS y JS sin depe
 ## Contenido
 - Venta de vehículos de ocasión (garantía 1 año, IVA incluido).
 - Reprogramación y preparación de competición.
+- Sección de reprogramación BND Unlimited (distribuidor oficial): Stage 1, cambio automático DSG y multimapas. Solo texto, sin el logo de BND.
 - Alquiler de vehículos y camper.
 - Galería con entregas reales recientes (fotos tomadas de [@martinez_multimarca](https://www.instagram.com/martinez_multimarca/)).
 - Contacto: Avda. de Castilla 163, Verín · 607 91 73 39 · 988 41 04 18 · simon@martinezmultimarca.com.
