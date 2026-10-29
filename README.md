@@ -5,11 +5,17 @@
 
 Web estática de Martínez Multimarca (Verín, Ourense). HTML, CSS y JS sin dependencias ni paso de build, publicada en GitHub Pages: <https://juanito2003.github.io/multimarcamartinez/>
 
+## Aspecto
+Desde octubre de 2026 el diseño recupera el de la web antigua de martinezmultimarca.com ([copia de marzo de 2025 en archive.org](https://web.archive.org/web/20250321134944/https://martinezmultimarca.com/)): franja superior gris oscuro con el teléfono, cabecera roja con el logo, foto de la fachada a todo el ancho, franja oscura de cifras (700 m², 50 vehículos, 1.000 m², +40 años), franja roja «Echa un vistazo a nuestros vehículos de ocasión y KM0» y pie gris oscuro. Los colores salen de la web antigua (`--brand-red`, `--dark`, `--dark-2` en `styles.css`); para textos sobre fondo claro se usa `--accent`, un rojo algo más oscuro que cumple el contraste AA.
+
 ## Contenido
-- Venta de vehículos de ocasión (garantía 1 año, IVA incluido).
-- Reprogramación y preparación de competición.
-- Sección de reprogramación BND Unlimited (distribuidor oficial): Stage 1, cambio automático DSG y multimapas. Solo texto, sin el logo de BND.
-- Alquiler de vehículos y camper.
+- Venta de vehículos seminuevos, nuevos y KM0 (garantía 1 año, IVA incluido, financiación).
+- Sección de reprogramación BND Unlimited (distribuidor oficial): Stage 1, cambio automático DSG y multimapas, y el banco de potencia propio (desde noviembre de 2022). Solo texto, sin el logo de BND.
+- Sección de competición: escudería Talleres Martínez Racing (rallyes y montaña), con la foto de rally de la web antigua.
+- Servicios de taller con los textos de la web antigua: mantenimiento integral, chapa y pintura, pre-ITV, accesorios y enganches, electricidad y diagnosis.
+- Alquiler de vehículos, furgonetas de hasta 9 plazas o de carga, y camper.
+- Opiniones: enlaces a las valoraciones de Google y de coches.net (sin copiar los textos de las reseñas).
+- Stock actual: enlace al escaparate del concesionario en coches.net, además de Instagram, Facebook y WhatsApp.
 - Galería con entregas reales recientes (fotos tomadas de [@martinez_multimarca](https://www.instagram.com/martinez_multimarca/)).
 - Contacto: Avda. de Castilla 163, Verín · 607 91 73 39 · 988 41 04 18 · simon@martinezmultimarca.com.
 
@@ -24,7 +30,8 @@ main.js               Menú móvil, botones «Copiar» y año del footer
 fonts/                Oswald, Work Sans y JetBrains Mono (woff2, subconjunto latin) + licencias OFL
 images/
   logo.webp|png       Logo a 2x (256x72)
-  showroom.webp|jpg   Foto del local (hero)
+  fachada*.webp|jpg   Fachada del local (hero), 1920x500 con variantes de 800 y 1200 px. Matrículas difuminadas
+  rally.webp|jpg      Coche de la escudería (sección de competición)
   0N-*.jpg            Fotos de la galería (640px) + variantes -400.webp y -640.webp
   og-image.jpg        Imagen para compartir en redes (1200x630)
   icon-*.png          Iconos del manifest (192, 512, maskable)
@@ -69,8 +76,10 @@ Nota: en un sitio de proyecto de GitHub Pages los buscadores solo leen el `robot
 ## Pendiente
 - **Datos legales:** sustituir `[RAZÓN SOCIAL]`, `[NIF]` y `[DATOS REGISTRO MERCANTIL]` en `aviso-legal.html` y `privacidad.html` con los datos que facilite el dueño. Si es autónomo y no sociedad, quitar la línea de datos registrales.
 - **Dominio propio:** ver la sección anterior. Con hosting propio, añadir las cabeceras `Content-Security-Policy` (con `frame-ancestors 'none'`) y `Strict-Transport-Security`.
-- Confirmar el horario de apertura (en la web y en el JSON-LD).
-- Confirmar el dato «más de 40 años» y la valoración y seguidores del hero.
-- Conseguir una foto del local de más resolución: la actual mide 1200x313 y se ve algo borrosa en pantallas retina.
+- **Razón social:** la ficha de ATAVE la recoge como «Martínez Multimarca, S.L.». Confirmarlo con el dueño junto con el NIF y los datos registrales.
+- **Permiso para las fotos de la galería:** varias muestran a clientes (en la de la Berlingo se reconoce la cara). Confirmar que hay consentimiento o cambiarlas.
+- **Fotos nuevas:** la de la fachada (hero) y la de rally son de la web antigua (2013). Pedir una foto actual de la fachada (el rótulo ha cambiado) y una del banco de potencia, que la web antigua tenía pero archive.org no guardó.
+- **Confirmar datos:** horario (en la web y en el JSON-LD), las cifras de la franja oscura (700 m², 50 vehículos y 1.000 m² salen de la web antigua) y la valoración 4,5/5 con más de 100 opiniones (dato de Páxinas Galegas, que enlaza a las reseñas de Google). La de coches.net es 4,8/5 con 5 valoraciones (octubre de 2026).
+- **Escudería:** confirmar que sigue activa y si quieren nombrar pilotos o pruebas.
 - Sustituir o ampliar la galería cuando haya fotos de stock actual.
 - Trasladar el contenido a la web actual de martinezmultimarca.com una vez haya acceso al hosting, aplicando antes las correcciones de seguridad acordadas con el cliente.
