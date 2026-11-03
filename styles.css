@@ -524,7 +524,7 @@ a.more-link:hover{text-decoration:underline;}
   flex-direction:column;
 }
 .car-card .photo{
-  aspect-ratio:1/1;
+  aspect-ratio:4/3;
   overflow:hidden;
   background:var(--line);
 }
